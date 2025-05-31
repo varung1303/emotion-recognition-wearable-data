@@ -2,8 +2,6 @@
 
 This project explores the use of physiological signals collected from wearable devices to recognize emotional states such as **stress**, **amusement**, **meditation**, and **baseline**. Leveraging both classical machine learning and deep learning models, this study aims to build a reliable emotion classification system using real-world biosignals.
 
-> 🧠 _Developed as part of the Statistical Machine Learning course at Arizona State University._
-
 ---
 
 ## 📌 Project Overview
