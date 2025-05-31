@@ -1,0 +1,94 @@
+
+Comprehensive Report on Models and Performance Metrics
+
+The notebook utilizes multiple models to recognize emotions from wearable data. Each model's configuration, accuracy, classification report, and confusion matrix findings are presented below.
+
+---
+
+1. Random Forest Classifier
+   - Accuracy: 99.48%
+   - Classification Report:
+         precision    recall  f1-score   support
+         1.0       1.00      0.99      1.00      3536
+         2.0       1.00      1.00      1.00      2000
+         3.0       0.98      1.00      0.99      1120
+         4.0       0.99      0.99      0.99      2360
+
+         accuracy                           0.99      9016
+         macro avg       0.99      0.99      0.99      9016
+         weighted avg       0.99      0.99      0.99      9016
+
+2. Gradient Boosting Classifier
+   - Accuracy: 98.51%
+   - Classification Report:
+         precision    recall  f1-score   support
+         1.0       0.99      0.99      0.99      3536
+         2.0       0.99      1.00      0.99      2000
+         3.0       0.98      0.97      0.98      1120
+         4.0       0.98      0.99      0.98      2360
+
+         accuracy                           0.99      9016
+         macro avg       0.98      0.98      0.98      9016
+         weighted avg       0.99      0.99      0.99      9016
+
+3. Support Vector Machine (SVM)
+   - Accuracy: 83%
+   - Classification Report:
+         precision    recall  f1-score   support
+         0.0       0.83      0.97      0.90      3536
+         1.0       0.94      0.92      0.93      2000
+         2.0       0.75      0.26      0.38      1120
+         3.0       0.76      0.81      0.79      2360
+
+         accuracy                           0.83      9016
+         macro avg       0.82      0.74      0.75      9016
+         weighted avg       0.83      0.83      0.81      9016
+
+4. MLP (Multi-Layer Perceptron) Neural Network
+   - Accuracy: 96%
+   - Classification Report:
+         precision    recall  f1-score   support
+         0.0       0.98      0.99      0.99      3536
+         1.0       0.99      0.99      0.99      2000
+         2.0       0.91      0.85      0.88      1120
+         3.0       0.94      0.96      0.95      2360
+
+         accuracy                           0.96      9016
+         macro avg       0.96      0.95      0.95      9016
+         weighted avg       0.96      0.96      0.96      9016
+
+5. Logistic Regression
+   - Accuracy: 52%
+   - Classification Report:
+         precision    recall  f1-score   support
+         0.0       0.57      0.79      0.66      3536
+         1.0       0.48      0.28      0.35      2000
+         2.0       0.00      0.00      0.00      1120
+         3.0       0.45      0.56      0.50      2360
+
+         accuracy                           0.52      9016
+         macro avg       0.38      0.41      0.38      9016
+         weighted avg       0.45      0.52      0.47      9016
+
+6. Improved LSTM Model (Latest Results)
+   - Accuracy: 84%
+   - Classification Report:
+         precision    recall  f1-score   support
+         Baseline       0.90      0.98      0.94      3532
+         Stress         0.94      0.96      0.95      1999
+         Amusement      0.58      0.23      0.33      1117
+         Meditation     0.73      0.83      0.78      2349
+
+         accuracy                           0.84      8997
+         macro avg       0.79      0.75      0.75      8997
+         weighted avg       0.82      0.84      0.82      8997
+
+---
+
+Summary
+- Best Performance: The Random Forest and MLP models achieved the highest accuracy (approximately 99% and 96%, respectively).
+- Moderate Performance: The improved LSTM model achieved 84% accuracy with good performance on most classes but struggled with "Amusement," similar to the SVM.
+- Lower Performance: Logistic Regression had an accuracy of 52%, indicating limited effectiveness for this classification task.
+- Key Observations: Both the LSTM and SVM models show challenges with correctly classifying "Amusement," suggesting this class may have less distinguishable patterns.
+
+This report includes all models with detailed insights into accuracy, F1-score, and confusion matrix findings across emotion classes.
